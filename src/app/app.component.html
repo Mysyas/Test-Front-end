@@ -1,0 +1,28 @@
+<mat-toolbar style="margin-bottom: 20px">
+    <img src="/assets/logo.png" alt="logo" width="99" height="99"/>
+    <div class="spacer"></div>
+    <button mat-button >Accueil</button>
+    <button mat-button routerLink="/search">Recherche</button>
+    <button mat-button>A Propos</button>
+    <div class="spacer1"></div>
+    <button mat-button class="raised-btn" routerLink="/login">Connexion</button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+
+<mat-toolbar class="footer">
+    <img src="assets/logo%202.png" alt="logo2">
+    <div class="spacer"></div>
+    <a>
+        <img class="logo" src="assets/youtube.png" alt="youtube"/>
+    </a>
+    <a>
+        <img class="logo" src="assets/twitter.png" alt="twitter"/>
+    </a>
+    <a>
+        <img class="logo" src="assets/instragram.png" alt="instagram"/>
+    </a>
+    <a>
+        <img class="logo" src="assets/facebook.png" alt="facebook"/>
+    </a>
+</mat-toolbar>

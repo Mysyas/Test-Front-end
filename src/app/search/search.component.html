@@ -1,0 +1,19 @@
+<div>
+    <input placeholder="recherche ... " [(ngModel)]="searchText"/>
+</div>
+<div class="fullwidth img-container">
+    <ng-container *ngFor="let artwork of artworks">
+
+        <mat-card >
+            <mat-card-content>
+                <img class="fill" src="{{getImage(artwork.image_id)}}" alt="Test"/>
+            </mat-card-content>
+            <mat-card-footer>
+                <mat-card-title>{{artwork.title}}</mat-card-title>
+                <p>{{artwork.artist_title}}</p>
+            </mat-card-footer>
+        </mat-card>
+
+    </ng-container>
+</div>
+

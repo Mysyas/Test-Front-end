@@ -1,0 +1,19 @@
+.img-container{
+    display: grid;
+    grid-template-columns: 217px 217px 217px 217px 217px;
+
+}
+.fullwidth{
+    width: 100%;
+}
+.fill{
+    width: 100%;
+}
+mat-card{
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+mat-card-footer{
+    margin-top: -90px;
+}
