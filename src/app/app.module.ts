@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgxSearchFilterModule } from 'ngx-search-filter';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
@@ -12,6 +12,9 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 import {FormsModule} from "@angular/forms";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatInputModule} from "@angular/material/input";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -19,16 +22,20 @@ import {FormsModule} from "@angular/forms";
     SearchComponent,
     ArtworkDetailsComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatCardModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    NgxSearchFilterModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
+    FormsModule,
+    MatGridListModule,
+    MatInputModule,
+    MatIconModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

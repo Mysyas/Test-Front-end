@@ -1,19 +1,25 @@
 <div>
-    <input placeholder="recherche ... " [(ngModel)]="searchText"/>
+  <mat-form-field appearance="fill" >
+    <input matInput placeholder="recherche ... " [(ngModel)]="searchText"/>
+    <mat-icon matSuffix >search</mat-icon>
+  </mat-form-field>
+
+
 </div>
-<div class="fullwidth img-container">
-    <ng-container *ngFor="let artwork of artworks">
+<div class="fullwidth img-container" style="margin-bottom: 40px">
+  <mat-grid-list cols="5" rowHeight="350px">
+      <mat-grid-tile *ngFor="let artwork of artworks | filter:searchText">
+        <img class="fill" src="{{getImage(artwork.image_id)}}" alt="Test" (click)="getDetails(artwork)"/>
+        <mat-grid-tile-footer>
+          <div>
+            <p class="title">{{artwork.title}}</p>
+            <p class="author">{{artwork.artist_title}}</p>
+          </div>
 
-        <mat-card >
-            <mat-card-content>
-                <img class="fill" src="{{getImage(artwork.image_id)}}" alt="Test"/>
-            </mat-card-content>
-            <mat-card-footer>
-                <mat-card-title>{{artwork.title}}</mat-card-title>
-                <p>{{artwork.artist_title}}</p>
-            </mat-card-footer>
-        </mat-card>
+        </mat-grid-tile-footer>
 
-    </ng-container>
+      </mat-grid-tile>
+  </mat-grid-list>
+
 </div>
 

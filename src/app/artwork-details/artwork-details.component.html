@@ -1,1 +1,24 @@
-<p>artwork-details works!</p>
+<div class="main container">
+  <div class="img">
+    <img [src]="getImage()"/>
+
+  </div>
+  <div class="info">
+    <h1>{{art.title}}</h1>
+    <p>{{art['artist_title']}}</p>
+    <p>
+      {{art['description']}}
+    </p>
+    <h3>Dimensions</h3>
+    <p>{{art['dimensions']}}</p>
+    <h3>Term titles</h3>
+    <div *ngFor="let term of art['term_titles']" class="rcontainer">
+        <p class="round">
+          {{term}}
+        </p>
+    </div>
+    <div>
+
+    </div>
+  </div>
+</div>
